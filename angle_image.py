@@ -1,9 +1,17 @@
 import cv2
 import os
+
+# window
+import sys
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent
+sys.path.append(f'{BASE_DIR}')
+
+
 from utils import generate_rotated_image
 import random
-root_path="H:\\Downloads\\Compressed\\baidu_login\\some_demo"
-create_path="H:\\Downloads\\Compressed\\baidu_login\\angle_demo"
+root_path="D:\\work\ERP\\workspace\\baidu_login\\some_demo"
+create_path="D:\\work\ERP\\workspace\\baidu_login\\angle_demo"
 filenames=os.listdir(root_path)
 for filename in filenames:
     image = cv2.imread(os.path.join(root_path,filename), 1)
